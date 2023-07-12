@@ -15,7 +15,8 @@ export const useContractToApprove = (buyMeCoffee: number | string) => {
         args: [BuyCoffee.address, buyMeCoffee],
         
         overrides: {
-            gasLimit
+            gasLimit,
+            
         },
         onError: (err) => {
             console.log({err})

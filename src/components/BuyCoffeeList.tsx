@@ -5,9 +5,8 @@ import ErrorAlert from './alerts/ErrorAlert'
 import OnSuccessAlert from './alerts/OnSuccessAlert'
 import LoadingAlert from './alerts/LoadingAlert'
 
-type Props = {}
 
-const BuyCoffeeList = (props: Props) => {
+const BuyCoffeeList = () => {
 
   const { data } = useContractToCall("getBuyCoffeeLenght", [], true)
 

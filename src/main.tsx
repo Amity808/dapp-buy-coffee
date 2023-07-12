@@ -10,14 +10,12 @@ import { getDefaultWallets, RainbowKitProvider} from '@rainbow-me/rainbowkit'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { mainnet, polygon, arbitrum, celo, celoAlfajores, celoCannoli} from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public'
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 import { ToastContainer } from 'react-toastify'
 
 
 const {chains, publicClient} = configureChains(
   [mainnet, polygon,  arbitrum, celo, celoAlfajores, celoCannoli],
   [publicProvider()],
-  [jsonRpcProvider({ rpc: (chains) => ({http: chains.rpcUrls.default.http[0]})})]
 );
 
 const { connectors } = getDefaultWallets({

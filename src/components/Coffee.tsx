@@ -1,11 +1,6 @@
 import { useCallback, useEffect, useState} from 'react'
 import { useDebounce } from'use-debounce'
-import { useConnectModal } from '@rainbow-me/rainbowkit'
-import { useAccount } from 'wagmi'
-import { toast } from 'react-toastify'
-import { useContractToApprove } from '../hooks/useApprove'
 import { useContractToCall } from '../hooks/useContractRead'
-import { useContractSend  } from '../hooks/useContractWrite'
 import { sendTransaction } from '@wagmi/core'
 import { parseEther } from 'ethers/lib/utils'
 

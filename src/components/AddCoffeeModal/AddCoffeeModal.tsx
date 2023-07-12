@@ -56,7 +56,7 @@ const AddCoffeeModal = () => {
 
         const purchaseTx = await createBuyCoffee();
         setLoading("Waiting for confirm...")
-        await purchaseTx.wait();
+        await purchaseTx;
 
         setToggle(false)
         clearForm();
@@ -105,7 +105,7 @@ const AddCoffeeModal = () => {
         data-bs-target='#exampleModalCenter'
         className=' ml-5 px-6 py-2.5 '
         >
-            Buy Me Coffee
+            Buy Me Coffee {displayBalance}
         </button>
         {/* the modal structure */}
         {toggle && (
