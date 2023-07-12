@@ -1,5 +1,4 @@
-// import React, { FormEvent } from 'react'
-import { useCallback, useEffect, useState, FormEvent} from 'react'
+import { useCallback, useEffect, useState} from 'react'
 import { useDebounce } from'use-debounce'
 import { useConnectModal } from '@rainbow-me/rainbowkit'
 import { useAccount } from 'wagmi'
@@ -19,28 +18,16 @@ interface BuyMeCoffeInTerface {
     message: string
 }
 
-const Coffee = ({ id, setError, setLoading, clear}: any) => {
-// use the account store the users address
-    const { address } = useAccount();
+const Coffee = ({ id }: any) => {
 
     const { data: rawCoffee }: any = useContractToCall('coffeeDonator', [id], true)
 
     const [valueAmount, setValueAmount] = useState('');
 
     const [ debouncedValue ] = useDebounce(valueAmount, 500)
-    // msg.value is need here
-    const { writeAsync: donate }  = useContractSend("buyMeCoffee", [Number(id)])
-
+    
     const [coffee, setCoffee] = useState<BuyMeCoffeInTerface | null>(null)
 
-   
-
-    // msg.value
-    const { writeAsync: approve } = useContractToApprove(
-        debouncedValue?.toString() || '0'
-    )
-
-    const { openConnectModal } = useConnectModal();
 
     const getFormatedCoffees = useCallback(() => {
         if(!rawCoffee) return null;
@@ -57,51 +44,6 @@ const Coffee = ({ id, setError, setLoading, clear}: any) => {
     useEffect(() => {
       getFormatedCoffees();
     }, [getFormatedCoffees])
-
-    // to handle donation
-    const handleDonation = async () => {
-
-        if(!approve || !donate) {
-            throw "Failed to Donate to the receipent"
-        }
-        // approve the donation 
-        const approveTx = await approve();
-        // we wait for transaction to be complete
-
-        await approveTx.wait(1)
-        setLoading("Donating ....")
-
-        const res = await donate();
-        await res.wait();
-    }
-
-    // donate
-
-    const donateCoffee = async (e: any) => {
-        e.preventDefault()
-        setLoading("Approving ....");
-        clear();
-
-        try {
-            // if userv not connect, this will trigger the wallet
-            if(!address && openConnectModal) {
-                openConnectModal();
-                return;
-            }
-            // if the account of the user is connectwd we will handleDonation
-            await toast.promise(handleDonation(), {
-                pending: "Donating .....",
-                success: "Donation is made successfully",
-                error: "Failed to donate, try again"
-            });
-        } catch (e: any) {
-            console.log({ e })
-            setError(e?.reason || e?.message || "Something went wrong. Try again")
-            
-        } finally {
-            setLoading(null);
-        }
-    };
 
     if (!coffee) return null;
     

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import { useContractToCall } from '../hooks/useContractRead'
 import Coffee from './Coffee'

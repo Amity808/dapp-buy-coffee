@@ -1,6 +1,4 @@
-import React from 'react'
 import { useState, useEffect } from 'react'
-import { ethers } from 'ethers'
 import { useAccount, useBalance } from 'wagmi'
 import { useDebounce } from 'use-debounce'
 import { toast } from 'react-toastify'
