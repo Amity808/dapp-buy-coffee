@@ -5,7 +5,6 @@ import { toast } from 'react-toastify'
 import { useContractSend } from '../../hooks/useContractWrite'
 import ERC20 from '../../abis/erc20InstacnceAbi.json'
 
-type Props = {}
 
 const AddCoffeeModal = () => {
     const [toggle, setToggle] = useState(false)

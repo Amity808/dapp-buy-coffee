@@ -1,4 +1,3 @@
-import React from 'react'
 import AddCoffeeModal from './AddCoffeeModal/AddCoffeeModal'
 // type Props = {}
 
