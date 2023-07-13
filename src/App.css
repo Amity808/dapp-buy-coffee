@@ -22,3 +22,18 @@
   background: #6A4F41;
 }
 
+
+@media screen and (max-width: 550px) {
+  /* CSS rules to apply when the screen width is 768 pixels or less */
+  .MinHeader {
+    width: 39px;
+   height: 224px;
+  
+  }
+  
+  .innerDiv {
+    width: 375.857px;
+    height: 200.159px;
+   
+  }
+}
