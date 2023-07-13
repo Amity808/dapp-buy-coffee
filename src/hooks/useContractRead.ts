@@ -8,7 +8,6 @@ export const useContractToCall = (functionName: string, args?: Array<any>, watch
         functionName: functionName,
         args,
         watch,
-        overrides: from? { from } : undefined,
         onError: (err) => {
             console.log({ err })
         }

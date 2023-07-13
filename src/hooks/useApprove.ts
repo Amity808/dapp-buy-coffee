@@ -19,5 +19,5 @@ export const useContractToApprove = (buyMeCoffee: number | string) => {
     })
 
     const { data, isSuccess, write, writeAsync, error, isLoading} = useContractWrite(config)
-    return {data, isSuccess, write,  writeAsync, isLoading}
+    return {data, isSuccess, write,  writeAsync, error, isLoading}
  }
