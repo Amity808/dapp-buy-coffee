@@ -2,10 +2,10 @@ import { useContractWrite, usePrepareContractWrite } from 'wagmi'
 import ERC20 from '../abis/erc20InstacnceAbi.json'
 
 import BuyCoffee from '../abis/buycoffee.json'
-import { BigNumber } from 'ethers'
+// import { BigNumber } from 'ethers'
 
 export const useContractToApprove = (buyMeCoffee: number | string) => {
-    const gasLimit = BigNumber.from(1000000);
+    // const gasLimit = BigNumber.from(1000000);
 
     // contract prepare
     const { config } = usePrepareContractWrite({
@@ -13,11 +13,6 @@ export const useContractToApprove = (buyMeCoffee: number | string) => {
         abi: ERC20.abi,
         functionName: 'approve',
         args: [BuyCoffee.address, buyMeCoffee],
-        
-        overrides: {
-            gasLimit,
-            
-        },
         onError: (err) => {
             console.log({err})
         }
