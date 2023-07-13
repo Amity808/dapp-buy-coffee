@@ -1,4 +1,5 @@
 import Home from './components/Home'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 import './App.css'
 
@@ -6,7 +7,10 @@ function App() {
 
   return (
        <div className='bgcolor'>
-        <Home />
+        <div>
+            <ConnectButton  />
+        </div>
+          <Home />
        </div>
   )
 }

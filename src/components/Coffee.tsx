@@ -54,7 +54,7 @@ const Coffee = ({ id }: any) => {
 
 
   return (
-    <div className=' max-w-xs m-auto mr-3 bg-red-950/20  h-full max-sm:mt-2'>
+    <div className=' max-w-xs m-auto mr-3 bg-red-950/20  h-full max-sm:mt-2 text-center'>
         <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-white xl:aspect-w-7 xl:aspect-h-8 ">
           <img
             src={coffee.imageUrl}
@@ -76,7 +76,7 @@ const Coffee = ({ id }: any) => {
                 <input type="number" value={debouncedValue} className=' py-4 px-4 w-64 rounded-full text-black' name='valueAmount' onChange={(e) => setValueAmount(e.target.value)} id="valueAmount" placeholder='Enter Value in cUSD numbers only' />
             </div>
             <button className='border-y-amber-950 border-4 px-4 py-2 rounded-full text-lg hover:bg-black/50 ' >
-                Sent
+                Send
             </button>
             </form>
         </div>

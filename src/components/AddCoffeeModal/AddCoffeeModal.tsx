@@ -103,7 +103,7 @@ const AddCoffeeModal = () => {
         type='button'
         data-bs-toggle='modalcoffee'
         data-bs-target='#exampleModalCenter'
-        className=' ml-5 px-6 py-2.5 '
+        className=' ml-5 px-6 py-2.5 text-center'
         >
             Buy Me Coffee {displayBalance}
         </button>
@@ -124,8 +124,6 @@ const AddCoffeeModal = () => {
                         <input type="text" className=' py-4 px-6 w-full rounded-full text-black' name='message' onChange={(e) => setMessage(e.target.value)} id="message" placeholder='Why buy me coffee in max-200 word' />
                     </div>
                     
-
-
                     {/* close the modal */}
                     <div className=' items-center flex justify-between'>
                         <button className=' border-y-amber-950 border-4 px-4 py-2 rounded-full text-lg hover:bg-black/50 ' type='submit' disabled={!!loading || !isComplete || !createBuyCoffee}>

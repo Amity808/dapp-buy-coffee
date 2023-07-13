@@ -4,7 +4,9 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div>
+      <p>Amityclev == Amitydev</p>
+    </div>
   )
 }
 
