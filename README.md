@@ -46,7 +46,7 @@ React Blockies: The React Blockies library generates unique identicons based on 
 
 Installation
 
-git clone https://github.com/your-username/buycoffee.git
+https://github.com/Amity808/dapp-buy-coffee
 
 npm install
 
