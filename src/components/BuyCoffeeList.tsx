@@ -28,24 +28,17 @@ const BuyCoffeeList = () => {
 
   const getCoffee = () => {
     // if the buyMeCoffee is null 
-    if(!coffeeLenght) return null;
-    const coffees = [];
-    // loop through the data of coffee
-
-    for (let index = 0; index < coffeeLenght; index++) {
-      coffees.push(
-        <Coffee 
-        key={index}
-        id={index}
-        setSuccess={setSuccess}
-        seError={setError}
-        setLoading={setLoading}
-        clear={clear}
-        />
-      )
-      
-    }
-    return coffees
+    if(!coffeeLength) return null;
+    return Array.from({ length: coffeeLength }).map((_, index) => (
+    <Coffee
+      key={index}
+      id={index}
+      setSuccess={setSuccess}
+      setError={setError}
+      setLoading={setLoading}
+      clear={clear}
+    />
+  ));
   }
   return (
     <div className=' mb-3'>
