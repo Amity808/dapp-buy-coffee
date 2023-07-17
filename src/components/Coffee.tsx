@@ -13,7 +13,7 @@ interface BuyMeCoffeInTerface {
     message: string
 }
 
-const Coffee = ({ id }: any) => {
+const Coffee = ({ id }: { id: any }) => {
 
     const { data: rawCoffee }: any = useContractToCall('coffeeDonator', [id], true)
 
