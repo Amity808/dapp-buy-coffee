@@ -48,7 +48,7 @@ const BuyCoffeeList = () => {
     return coffees
   }
   return (
-    <div className=' mb-3'>
+    <div className='mb-3'>
       {error && <ErrorAlert message={error} clear={clear} />}
       {success && <OnSuccessAlert message={success} />}
       {loading && <LoadingAlert message={loading} />}
