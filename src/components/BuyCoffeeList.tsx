@@ -26,6 +26,18 @@ const BuyCoffeeList = () => {
     setLoading('');
   };
 
+//   if(!coffeeLength) return null;
+//   return Array.from({ length: coffeeLength }).map((_, index) => (
+//   <Coffee
+//     key={index}
+//     id={index}
+//     //setSuccess={setSuccess}
+//     //setError={setError}
+//     //setLoading={setLoading}
+//     //clear={clear}
+//   />
+// ));
+
   const getCoffee = () => {
     // if the buyMeCoffee is null 
     if(!coffeeLenght) return null;
