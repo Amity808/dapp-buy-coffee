@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useContractToCall } from '../hooks/useContractRead'
 import Coffee from './Coffee'
-import ErrorAlert from './alerts/ErrorAlert'
-import OnSuccessAlert from './alerts/OnSuccessAlert'
-import LoadingAlert from './alerts/LoadingAlert'
+// import ErrorAlert from './alerts/ErrorAlert'
+// import OnSuccessAlert from './alerts/OnSuccessAlert'
+// import LoadingAlert from './alerts/LoadingAlert'
 
 
 const BuyCoffeeList = () => {
@@ -37,9 +37,15 @@ const BuyCoffeeList = () => {
         <Coffee 
         key={index}
         id={index}
+<<<<<<< HEAD
         // setSuccess={setSuccess}
         // seError={setError}
         // setLoading={setLoading}
+=======
+{/*         setSuccess={setSuccess}
+        seError={setError}
+        setLoading={setLoading} */}
+>>>>>>> cf0420f92689753e3f87a30238a887d21d43b881
         clear={clear}
         />
       )
@@ -49,7 +55,11 @@ const BuyCoffeeList = () => {
   }
   return (
     <div className='mb-3'>
+<<<<<<< HEAD
       {/* {error && <ErrorAlert message={error} clear={clear} />}
+=======
+{/*       {error && <ErrorAlert message={error} clear={clear} />}
+>>>>>>> cf0420f92689753e3f87a30238a887d21d43b881
       {success && <OnSuccessAlert message={success} />}
       {loading && <LoadingAlert message={loading} />} */}
       {/* display buyMeCoffee */}
