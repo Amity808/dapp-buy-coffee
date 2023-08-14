@@ -20,8 +20,8 @@ To use this project, you need to follow the installation steps outlined below:
 4. Switch to the Alfajores testnet:
    - In the CeloExtensionWallet, switch your network to the Alfajores testnet. This ensures that you are connected to the appropriate blockchain network to interact with the certificate storage application.
 
-##Features
-The BuyCoffee project offers the following features:
+## Features
+ The BuyCoffee project offers the following features:
 
 Developer Selection: Users can choose their favorite developer from a list of registered developers in the marketplace.
 
