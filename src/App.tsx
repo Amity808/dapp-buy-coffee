@@ -9,10 +9,11 @@ function App() {
        <div className='bgcolor'>
         <div>
             <ConnectButton  />
+          
         </div>
           <Home />
        </div>
   )
 }
 
-export default App
+export default App;

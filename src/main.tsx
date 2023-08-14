@@ -6,6 +6,7 @@ import './index.css'
 
 import '../src/polyfills.js'
 import '@rainbow-me/rainbowkit/styles.css'
+import 'react-toastify/dist/ReactToastify.css';
 import { getDefaultWallets, RainbowKitProvider} from '@rainbow-me/rainbowkit'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { mainnet, polygon, arbitrum, celo, celoAlfajores, celoCannoli} from 'wagmi/chains';
@@ -34,7 +35,18 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-        <ToastContainer position={'bottom-center'}/>
+      <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          />
         <App />
       </RainbowKitProvider>
     </WagmiConfig>

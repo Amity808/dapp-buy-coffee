@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useContractToCall } from '../hooks/useContractRead'
 import Coffee from './Coffee'
-import ErrorAlert from './alerts/ErrorAlert'
-import OnSuccessAlert from './alerts/OnSuccessAlert'
-import LoadingAlert from './alerts/LoadingAlert'
+// import ErrorAlert from './alerts/ErrorAlert'
+// import OnSuccessAlert from './alerts/OnSuccessAlert'
+// import LoadingAlert from './alerts/LoadingAlert'
 
 
 const BuyCoffeeList = () => {
@@ -28,23 +28,30 @@ const BuyCoffeeList = () => {
 
   const getCoffee = () => {
     // if the buyMeCoffee is null 
-    if(!coffeeLength) return null;
-    return Array.from({ length: coffeeLength }).map((_, index) => (
-    <Coffee
-      key={index}
-      id={index}
-      setSuccess={setSuccess}
-      setError={setError}
-      setLoading={setLoading}
-      clear={clear}
-    />
-  ));
+    if(!coffeeLenght) return null;
+    const coffees = [];
+    // loop through the data of coffee
+
+    for (let index = 0; index < coffeeLenght; index++) {
+      coffees.push(
+        <Coffee 
+        key={index}
+        id={index}
+        // setSuccess={setSuccess}
+        // seError={setError}
+        // setLoading={setLoading}
+        clear={clear}
+        />
+      )
+      
+    }
+    return coffees
   }
   return (
-    <div className=' mb-3'>
-      {error && <ErrorAlert message={error} clear={clear} />}
+    <div className='mb-3'>
+      {/* {error && <ErrorAlert message={error} clear={clear} />}
       {success && <OnSuccessAlert message={success} />}
-      {loading && <LoadingAlert message={loading} />}
+      {loading && <LoadingAlert message={loading} />} */}
       {/* display buyMeCoffee */}
       <div className='mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
           <div className='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8'>
