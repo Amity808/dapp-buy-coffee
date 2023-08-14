@@ -18,7 +18,7 @@ contract BuyMeCoffee {
 
     // celo cUSD testnet
 
-    address internal cUsdTokenAddress = 0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
+    address internal cUsdTokenAddress = 0x4b0B17CE6c6DD5fd3a53f9e18E2d31B9F62F1362;
     // Event to emit when a memo is created
 
     event NewCoffee (
@@ -29,6 +29,7 @@ contract BuyMeCoffee {
         string message
 
     );
+    
     // the event struct
     struct Coffee{
         address payable owner;
