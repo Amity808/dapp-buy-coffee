@@ -13,18 +13,18 @@ const BuyCoffeeList = () => {
   const coffeeLenght = data? Number(data.toString()) : 0;
   // state of errors
 
-  const [error, setError] = useState('')
-  const [success, setSuccess] = useState('');
-  const [loading, setLoading] = useState('');
+  // const [error, setError] = useState('')
+  // const [success, setSuccess] = useState('');
+  // const [loading, setLoading] = useState('');
 
 
   // function to clear error
 
-  const clear = () => {
-    setError('');
-    setSuccess('');
-    setLoading('');
-  };
+  // const clear = () => {
+  //   setError('');
+  //   setSuccess('');
+  //   setLoading('');
+  // };
 
 //   if(!coffeeLength) return null;
 //   return Array.from({ length: coffeeLength }).map((_, index) => (
@@ -52,7 +52,7 @@ const BuyCoffeeList = () => {
         // setSuccess={setSuccess}
         // seError={setError}
         // setLoading={setLoading}
-        clear={clear}
+        // clear={clear}
         />
       )
       

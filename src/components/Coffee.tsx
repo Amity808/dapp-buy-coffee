@@ -3,11 +3,11 @@ import { useDebounce } from'use-debounce'
 import { useContractToCall } from '../hooks/useContractRead'
 import { sendTransaction } from '@wagmi/core'
 import { parseEther } from 'ethers/lib/utils'
-import { ethers } from 'ethers'
+// import { ethers } from 'ethers'
 import { toast } from 'react-toastify'
-import { useContractToApprove } from '../hooks/useApprove'
-import { useContractSend } from '../hooks/useContractWrite'
-import { useConnectModal } from '@rainbow-me/rainbowkit'
+// import { useContractToApprove } from '../hooks/useApprove'
+// import { useContractSend } from '../hooks/useContractWrite'
+// import { useConnectModal } from '@rainbow-me/rainbowkit'
 import { useAccount } from 'wagmi'
 import { truncateAddress } from '../utils'
 // import { BigNumber } from 'ethers'
@@ -31,9 +31,9 @@ const Coffee = ({ id }: { id: any }) => {
 
     const [ debouncedValue ] = useDebounce(valueAmount, 500)
 
-    const convertValue = ethers.utils.parseEther(
-        debouncedValue.toString() || "0"
-    )
+    // const convertValue = ethers.utils.parseEther(
+    //     debouncedValue.toString() || "0"
+    // )
 
     // const { writeAsync: buyMeCoffee } = useContractSend('buyMeCoffee', [Number(id), Number(convertValue)])
 
